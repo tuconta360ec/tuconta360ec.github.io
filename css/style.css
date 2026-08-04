@@ -97,3 +97,80 @@ header nav a{
 nav a:hover{
     color:var(--verde);
 }
+/* ==========================
+   HERO PRINCIPAL
+========================== */
+
+.hero{
+    padding:80px 0;
+    background:linear-gradient(135deg,#0F4C81,#1D74C9);
+    color:white;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+}
+
+.hero-text{
+    width:55%;
+}
+
+.hero-text h2{
+    font-size:45px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn-primary,
+.btn-secondary{
+    padding:14px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn-primary{
+    background:var(--verde);
+    color:white;
+}
+
+.btn-secondary{
+    background:white;
+    color:var(--azul);
+}
+
+
+.hero-card{
+    background:white;
+    color:var(--gris-oscuro);
+    padding:30px;
+    border-radius:15px;
+    box-shadow:var(--sombra);
+    width:35%;
+}
+
+.hero-card h3{
+    color:var(--azul);
+    margin-bottom:20px;
+}
+
+.hero-card ul{
+    list-style:none;
+}
+
+.hero-card li{
+    margin-bottom:12px;
+}
