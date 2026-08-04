@@ -250,3 +250,31 @@ nav a:hover{
     color:var(--verde);
     font-weight:bold;
 }
+/* ==========================
+   CENTRO DE DESCARGAS
+========================== */
+
+.descargas{
+    padding:80px 0;
+    background:#F7F8FA;
+}
+
+.descargas h2{
+    text-align:center;
+    color:var(--azul);
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.descargas .card{
+    border-top:4px solid var(--verde);
+}
+
+.descargas .card a{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 18px;
+    background:var(--verde);
+    color:white;
+    border-radius:6px;
+}
