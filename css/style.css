@@ -1,4 +1,33 @@
-/* Conta 360 EC */
-body {
-    background-color: red;
+/* ==========================================
+   TUCONTA360EC - Portal Tributario Ecuador
+   Versión 2.0
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --azul:#0F4C81;
+    --azul-claro:#1D74C9;
+    --verde:#00A86B;
+    --gris:#F5F7FA;
+    --gris-oscuro:#444;
+    --blanco:#FFFFFF;
+    --sombra:0 10px 30px rgba(0,0,0,.08);
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--gris);
+    color:var(--gris-oscuro);
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
