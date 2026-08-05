@@ -5,6 +5,85 @@
 
 
 console.log("TuConta360EC cargado correctamente");
+// ==================================
+// BASE DE DATOS TRIBUTARIA ECUADOR
+// ==================================
+
+
+// Tabla Impuesto a la Renta
+// Estructura preparada para actualización anual
+
+const tablaRentaGeneral = [
+
+    {
+        desde: 0,
+        hasta: 11902,
+        impuestoBasico: 0,
+        porcentaje: 0
+    },
+
+    {
+        desde: 11902,
+        hasta: 15159,
+        impuestoBasico: 0,
+        porcentaje: 5
+    },
+
+    {
+        desde: 15159,
+        hasta: 19682,
+        impuestoBasico: 162.85,
+        porcentaje: 10
+    },
+
+    {
+        desde: 19682,
+        hasta: 26031,
+        impuestoBasico: 615.15,
+        porcentaje: 12
+    }
+
+];
+
+
+
+// Tabla RIMPE Emprendedor
+// Preparada para rangos oficiales
+
+const tablaRimpeEmprendedor = [
+
+    {
+        desde:0,
+        hasta:20000,
+        impuesto:60
+    },
+
+    {
+        desde:20000,
+        hasta:50000,
+        impuesto:0
+    },
+
+    {
+        desde:50000,
+        hasta:100000,
+        impuesto:0
+    }
+
+];
+
+
+
+// Negocio Popular
+
+const negocioPopular = {
+
+    tarifaAnual:0,
+
+    observacion:
+    "Pendiente cargar tarifa oficial según normativa vigente"
+
+};
 
 
 // ===============================
