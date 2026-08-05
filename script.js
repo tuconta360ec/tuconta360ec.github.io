@@ -115,6 +115,10 @@ enlaces.forEach(enlace => {
 // ===============================
 
 
+// ==================================
+// FUNCIÓN CALCULO TRIBUTARIO
+// ==================================
+
 function calcularImpuesto(){
 
 
@@ -131,17 +135,15 @@ function calcularImpuesto(){
     let regimen = document.getElementById("regimen").value;
 
 
-
     let resultado = document.getElementById("resultado");
 
 
 
-    if(ingresos <= 0){
+    if(isNaN(ingresos) || ingresos <= 0){
 
 
         resultado.innerHTML =
         "Ingrese un valor válido de ingresos.";
-
 
         return;
 
@@ -162,7 +164,155 @@ function calcularImpuesto(){
 
     let impuesto = 0;
 
-    let mensaje = "";
+    let detalle = "";
+
+
+
+    // ==============================
+    // NEGOCIO POPULAR
+    // ==============================
+
+
+    if(regimen === "popular"){
+
+
+        impuesto = negocioPopular.tarifaAnual;
+
+
+        detalle =
+        negocioPopular.observacion;
+
+
+    }
+
+
+
+    // ==============================
+    // RIMPE EMPRENDEDOR
+    // ==============================
+
+
+    else if(regimen === "emprendedor"){
+
+
+        let rango = tablaRimpeEmprendedor.find(
+
+            item =>
+            baseImponible >= item.desde &&
+            baseImponible <= item.hasta
+
+        );
+
+
+        if(rango){
+
+            impuesto = rango.impuesto;
+
+        }
+
+
+        detalle =
+        "Aplicación de tabla RIMPE Emprendedor.";
+
+    }
+
+
+
+    // ==============================
+    // REGIMEN GENERAL
+    // ==============================
+
+
+    else{
+
+
+        let rango = tablaRentaGeneral.find(
+
+            item =>
+            baseImponible >= item.desde &&
+            baseImponible <= item.hasta
+
+        );
+
+
+        if(rango){
+
+
+            let excedente =
+            baseImponible - rango.desde;
+
+
+            impuesto =
+            rango.impuestoBasico +
+            (excedente * rango.porcentaje / 100);
+
+
+        }
+
+
+
+        detalle =
+        "Aplicación de tabla progresiva de Impuesto a la Renta.";
+
+    }
+
+
+
+    resultado.innerHTML = `
+
+    <div class="resultado-box">
+
+    <h3>Resultado Tributario</h3>
+
+    <p>
+    Régimen:
+    <strong>${regimen}</strong>
+    </p>
+
+
+    <p>
+    Ingresos:
+    <strong>
+    $${ingresos.toFixed(2)}
+    </strong>
+    </p>
+
+
+    <p>
+    Gastos:
+    <strong>
+    $${gastos.toFixed(2)}
+    </strong>
+    </p>
+
+
+    <p>
+    Base imponible:
+    <strong>
+    $${baseImponible.toFixed(2)}
+    </strong>
+    </p>
+
+
+    <p>
+    Impuesto estimado:
+    <strong>
+    $${impuesto.toFixed(2)}
+    </strong>
+    </p>
+
+
+    <small>
+    ${detalle}
+    </small>
+
+
+    </div>
+
+    `;
+
+
+}
 
 
 
