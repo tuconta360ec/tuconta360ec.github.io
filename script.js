@@ -199,11 +199,26 @@ function calcularImpuesto(){
 
     if(regimen == "popular"){
 
-        nombreRegimen = "RIMPE Negocio Popular";
+    nombreRegimen = "RIMPE Negocio Popular";
 
-        impuesto = 0;
+
+    let rango = tablaNegocioPopular.find(
+
+        item =>
+        ingresos >= item.desde &&
+        ingresos <= item.hasta
+
+    );
+
+
+    if(rango){
+
+        impuesto = rango.impuesto;
 
     }
+
+
+}
 
 
     else if(regimen == "emprendedor"){
