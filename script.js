@@ -133,6 +133,23 @@ function calcularImpuesto(){
 
 
     let regimen = document.getElementById("regimen").value;
+    let nombreRegimen = "";
+
+if(regimen === "popular"){
+
+    nombreRegimen = "RIMPE Negocio Popular";
+
+}
+else if(regimen === "emprendedor"){
+
+    nombreRegimen = "RIMPE Emprendedor";
+
+}
+else{
+
+    nombreRegimen = "Régimen General";
+
+}
 
 
     let resultado = document.getElementById("resultado");
