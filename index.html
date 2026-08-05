@@ -152,35 +152,68 @@
 
 <section id="calculadora">
 
-    <h2>Calculadora Tributaria</h2>
+<h2>Calculadora Tributaria Ecuador</h2>
 
-    <select id="regimen">
+<p>
+Calcula una estimación del impuesto según el régimen tributario seleccionado.
+</p>
 
-        <option value="popular">Negocio Popular</option>
 
-        <option value="emprendedor">RIMPE Emprendedor</option>
+<label>Tipo de contribuyente:</label>
 
-        <option value="general">Régimen General</option>
+<select id="regimen">
 
-    </select>
+<option value="popular">
+RIMPE Negocio Popular
+</option>
 
-    <br><br>
+<option value="emprendedor">
+RIMPE Emprendedor
+</option>
 
-    <input
-        type="number"
-        id="ingresos"
-        placeholder="Ingrese sus ingresos"
-    >
+<option value="general">
+Régimen General
+</option>
 
-    <br><br>
+</select>
 
-    <button onclick="calcularImpuesto()" class="btn">
 
-        Calcular
+<br><br>
 
-    </button>
 
-    <h3 id="resultado"></h3>
+<label>Ingresos anuales:</label>
+
+<input 
+type="number" 
+id="ingresos"
+placeholder="Ejemplo: 50000">
+
+
+<br><br>
+
+
+<label>Gastos deducibles:</label>
+
+<input 
+type="number"
+id="gastos"
+placeholder="Ejemplo: 15000">
+
+
+<br><br>
+
+
+<button onclick="calcularImpuesto()" class="btn">
+
+Calcular impuesto
+
+</button>
+
+
+<div id="resultado">
+
+</div>
+
 
 </section>
 
