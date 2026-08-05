@@ -1,336 +1,103 @@
-<!DOCTYPE html>
+from pathlib import Path
+
+html = """<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TuConta360EC | Portal Tributario del Ecuador</title>
-
-    <meta name="description" content="Portal tributario ecuatoriano con calculadoras, plantillas, noticias, capacitaciones y herramientas para contribuyentes y contadores.">
-
-    <meta name="keywords" content="SRI, Ecuador, impuestos, IVA, renta, contabilidad, tributación, NIIF">
-
-    <meta name="author" content="TuConta360EC">
-
-    <link rel="stylesheet" href="./css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TuConta360EC | Portal Tributario del Ecuador</title>
+<meta name="description" content="Portal tributario profesional del Ecuador">
+<link rel="stylesheet" href="./css/style.css">
 </head>
-    <section class="descargas">
-
-    <div class="container">
-
-        <h2>Centro de Descargas</h2>
-
-        <p class="subtitulo">
-            Plantillas y herramientas profesionales para contadores,
-            emprendedores y contribuyentes del Ecuador.
-        </p>
-
-
-        <div class="cards">
-
-
-            <div class="card">
-                <h3>📊 Excel Contable</h3>
-                <p>
-                    Control de ingresos, gastos y movimientos financieros.
-                </p>
-                <a href="#">Descargar</a>
-            </div>
-
-
-            <div class="card">
-                <h3>📑 Documentos Tributarios</h3>
-                <p>
-                    Formatos útiles para gestión contable y administrativa.
-                </p>
-                <a href="#">Descargar</a>
-            </div>
-
-
-            <div class="card">
-                <h3>📕 Guías Tributarias</h3>
-                <p>
-                    Material educativo sobre SRI e impuestos Ecuador.
-                </p>
-                <a href="#">Descargar</a>
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-   <section class="noticias">
-
-    <div class="container">
-
-        <h2>Noticias Tributarias Ecuador</h2>
-
-        <p class="subtitulo">
-            Información actualizada sobre impuestos, contabilidad y normativa ecuatoriana.
-        </p>
-
-
-        <div class="cards">
-
-
-            <div class="card">
-                <h3>📢 Actualizaciones SRI</h3>
-
-                <p>
-                    Conoce cambios, resoluciones y nuevos servicios digitales.
-                </p>
-
-                <a href="#">
-                    Leer más
-                </a>
-            </div>
-
-
-            <div class="card">
-                <h3>📅 Calendario Tributario</h3>
-
-                <p>
-                    Consulta fechas importantes para declaraciones y obligaciones.
-                </p>
-
-                <a href="#">
-                    Ver calendario
-                </a>
-            </div>
-
-
-            <div class="card">
-                <h3>⚖️ Legislación Laboral</h3>
-
-                <p>
-                    Información sobre contratos, salarios y obligaciones laborales.
-                </p>
-
-                <a href="#">
-                    Conocer más
-                </a>
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section> 
-<section class="capacitaciones">
-
-    <div class="container">
-
-        <h2>Capacitaciones Tributarias</h2>
-
-        <p class="subtitulo">
-            Aprende contabilidad, impuestos y normativa ecuatoriana
-            con contenido práctico.
-        </p>
-
-
-        <div class="cards">
-
-
-            <div class="card">
-                <h3>📘 Declaración de IVA</h3>
-
-                <p>
-                    Aprende el proceso correcto para declarar IVA ante el SRI.
-                </p>
-
-                <a href="#">
-                    Más información
-                </a>
-            </div>
-
-
-            <div class="card">
-                <h3>📊 Contabilidad desde cero</h3>
-
-                <p>
-                    Formación práctica para emprendedores y estudiantes.
-                </p>
-
-                <a href="#">
-                    Más información
-                </a>
-            </div>
-
-
-            <div class="card">
-                <h3>🏢 Tributación empresarial</h3>
-
-                <p>
-                    Obligaciones tributarias para negocios y empresas.
-                </p>
-
-                <a href="#">
-                    Más información
-                </a>
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
 <body>
 
 <header>
-    <div class="container">
-
-        <div class="logo">
-            <h1>TuConta360EC</h1>
-            <span>Portal Tributario del Ecuador</span>
-        </div>
-
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#calculadoras">Calculadoras</a>
-            <a href="#plantillas">Plantillas</a>
-            <a href="#biblioteca">Biblioteca</a>
-            <a href="#capacitaciones">Capacitaciones</a>
-        </nav>
-
-        <a href="#contacto" class="btn-header">
-            Contactar
-        </a>
-
+  <div class="container">
+    <div class="logo">
+      <h1>TuConta360EC</h1>
+      <span>Portal Tributario del Ecuador</span>
     </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#calculadoras">Calculadoras</a>
+      <a href="#descargas">Descargas</a>
+      <a href="#biblioteca">Biblioteca</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="btn-header">Contactar</a>
+  </div>
 </header>
-    <section class="hero">
 
-    <div class="container hero-content">
+<main>
 
-        <div class="hero-text">
+<section class="hero" id="inicio">
+<div class="container hero-content">
+<div class="hero-text">
+<h2>Soluciones contables y tributarias inteligentes para Ecuador</h2>
+<p>Portal profesional con herramientas, calculadoras, noticias, biblioteca y recursos para contadores, empresas y emprendedores.</p>
+<div class="hero-buttons">
+<a href="#calculadoras" class="btn-primary">Calculadoras</a>
+<a href="#descargas" class="btn-secondary">Plantillas</a>
+</div>
+</div>
 
-            <h2>
-                Soluciones contables y tributarias inteligentes para Ecuador
-            </h2>
-
-            <p>
-                Asesoría contable, herramientas digitales y conocimiento tributario
-                para ayudarte a cumplir tus obligaciones y tomar mejores decisiones.
-                
-                
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#calculadoras" class="btn-primary">
-                    🧮 Calculadoras Tributarias
-                </a>
-
-                <a href="#plantillas" class="btn-secondary">
-                    📂 Descargar Plantillas
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="hero-card">
-
-            <h3>Tu plataforma tributaria</h3>
-
+<div class="hero-card">
+<h3>Todo en un solo lugar</h3>
 <ul>
-    <li>✓ Calculadoras inteligentes</li>
-    <li>✓ Plantillas profesionales</li>
-    <li>✓ Actualizaciones del SRI</li>
-    <li>✓ Capacitación especializada</li>
+<li>✓ Calculadoras tributarias</li>
+<li>✓ Plantillas profesionales</li>
+<li>✓ Biblioteca tributaria</li>
+<li>✓ Noticias del SRI</li>
+<li>✓ Capacitaciones</li>
 </ul>
+</div>
+</div>
+</section>
 
-        </div>
-
-    </div>
 <section class="estadisticas">
-
-    <div class="container">
-
-        <div class="stats-grid">
-
-            <div class="stat-card">
-                <h3>10+</h3>
-                <p>Herramientas Tributarias</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>100+</h3>
-                <p>Plantillas Profesionales</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>365</h3>
-                <p>Días de Información Actualizada</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>24/7</h3>
-                <p>Acceso al Portal</p>
-            </div>
-
-        </div>
-
-    </div>
-
+<div class="container">
+<div class="stats-grid">
+<div class="stat-card"><h3>10+</h3><p>Herramientas</p></div>
+<div class="stat-card"><h3>100+</h3><p>Plantillas</p></div>
+<div class="stat-card"><h3>365</h3><p>Actualizaciones</p></div>
+<div class="stat-card"><h3>24/7</h3><p>Disponible</p></div>
+</div>
+</div>
 </section>
+
+<section class="servicios" id="servicios">
+<div class="container">
+<h2>Servicios</h2>
+<p class="subtitulo">Herramientas para una gestión tributaria eficiente.</p>
+<div class="cards">
+<div class="card"><div class="card-icon">🧮</div><h3>Calculadoras</h3><p>IVA, IR y más.</p></div>
+<div class="card"><div class="card-icon">📂</div><h3>Plantillas</h3><p>Excel y documentos.</p></div>
+<div class="card"><div class="card-icon">📚</div><h3>Biblioteca</h3><p>Normativa y guías.</p></div>
+<div class="card"><div class="card-icon">🎓</div><h3>Capacitaciones</h3><p>Cursos y talleres.</p></div>
+</div>
+</div>
 </section>
-    <section class="servicios">
 
-    <div class="container">
+<section id="calculadoras"><div class="container"><h2>Calculadoras Tributarias</h2></div></section>
+<section id="descargas"><div class="container"><h2>Centro de Descargas</h2></div></section>
+<section id="biblioteca"><div class="container"><h2>Biblioteca Tributaria</h2></div></section>
+<section id="noticias"><div class="container"><h2>Noticias SRI</h2></div></section>
+<section id="contacto"><div class="container"><h2>Contacto</h2></div></section>
 
-        <h2>Herramientas para tu gestión tributaria</h2>
+</main>
 
-        <p class="subtitulo">
-            Soluciones digitales para facilitar tus obligaciones contables y tributarias.
-        </p>
+<footer>
+<div class="container">
+<p>© 2026 TuConta360EC - Todos los derechos reservados.</p>
+</div>
+</footer>
 
-
-        <div class="cards">
-
-
-            <div class="card">
-                <h3>🧮 Calculadoras</h3>
-                <p>
-                    Calcula impuestos, IVA, renta y obligaciones tributarias.
-                </p>
-                <a href="#">Ingresar</a>
-            </div>
-
-
-            <div class="card">
-                <h3>📂 Plantillas</h3>
-                <p>
-                    Descarga formatos Excel, Word y documentos útiles.
-                </p>
-                <a href="#">Ver plantillas</a>
-            </div>
-
-
-            <div class="card">
-                <h3>📚 Biblioteca</h3>
-                <p>
-                    Consulta información tributaria, NIIF y normativa.
-                </p>
-                <a href="#">Explorar</a>
-            </div>
-
-
-            <div class="card">
-                <h3>🎓 Capacitaciones</h3>
-                <p>
-                    Aprende contabilidad y tributación ecuatoriana.
-                </p>
-                <a href="#">Ver cursos</a>
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
 </body>
+</html>
+"""
+
+path="/mnt/data/index.html"
+Path(path).write_text(html,encoding="utf-8")
+print(path)
