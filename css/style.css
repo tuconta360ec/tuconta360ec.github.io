@@ -371,3 +371,42 @@ tr:hover{
 background:#f5f5f5;
 
 }
+/* =========================
+RESULTADO CALCULADORA
+========================= */
+
+
+#resultado{
+
+    margin-top:30px;
+
+}
+
+
+.resultado-box{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
+
+}
+
+
+.resultado-box h3{
+
+    color:#0d47a1;
+
+    margin-bottom:15px;
+
+}
+
+
+.resultado-box strong{
+
+    color:#1565c0;
+
+}
