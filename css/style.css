@@ -537,3 +537,231 @@ CENTRO DE DESCARGAS
     background:#0d47a1;
 
 }
+/*=========================================
+TABLAS TRIBUTARIAS
+=========================================*/
+
+#tablas{
+
+    padding:80px 8%;
+
+    background:#f7f9fc;
+
+}
+
+#tablas h2{
+
+    text-align:center;
+
+    color:#0d47a1;
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+}
+
+#tablas p{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:35px;
+
+}
+
+#tablas h3{
+
+    color:#1565c0;
+
+    margin-top:45px;
+
+    margin-bottom:15px;
+
+    border-left:6px solid #1565c0;
+
+    padding-left:12px;
+
+}
+
+#tablas table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-bottom:40px;
+
+    background:#fff;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+}
+
+#tablas th{
+
+    background:#1565c0;
+
+    color:#fff;
+
+    padding:14px;
+
+    text-align:center;
+
+}
+
+#tablas td{
+
+    padding:12px;
+
+    border-bottom:1px solid #ececec;
+
+    text-align:center;
+
+}
+
+#tablas tr:hover{
+
+    background:#eef5ff;
+
+}
+
+
+/*=========================================
+FOOTER
+=========================================*/
+
+footer{
+
+    background:#0d47a1;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+    margin-top:60px;
+
+}
+
+footer p{
+
+    margin:8px;
+
+}
+
+footer a{
+
+    color:white;
+
+    margin:0 10px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:#ffd54f;
+
+}
+
+
+/*=========================================
+BOTONES
+=========================================*/
+
+.btn{
+
+    display:inline-block;
+
+    background:#1565c0;
+
+    color:white;
+
+    padding:12px 28px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#0d47a1;
+
+    transform:translateY(-3px);
+
+}
+
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+header{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.banner h2{
+
+font-size:32px;
+
+}
+
+.banner p{
+
+font-size:17px;
+
+}
+
+.contenedor-servicios{
+
+grid-template-columns:1fr;
+
+}
+
+#estadisticas{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:20px;
+
+}
+
+table{
+
+font-size:13px;
+
+}
+
+}
