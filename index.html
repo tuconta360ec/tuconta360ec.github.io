@@ -1,135 +1,92 @@
-from pathlib import Path
-
-html = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TuConta360EC | Portal Tributario del Ecuador</title>
-<meta name="description" content="Portal tributario profesional del Ecuador">
-<link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TuConta360EC</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <div class="logo">
-      <h1>TuConta360EC</h1>
-      <span>Portal Tributario del Ecuador</span>
-    </div>
+  <header>
+    <h1>TuConta360EC</h1>
     <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#calculadoras">Calculadoras</a>
-      <a href="#descargas">Descargas</a>
-      <a href="#biblioteca">Biblioteca</a>
-      <a href="#noticias">Noticias</a>
-      <a href="#contacto">Contacto</a>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#calculadora">Calculadora Tributaria</a></li>
+        <li><a href="#tablas">Tablas Tributarias</a></li>
+        <li><a href="#plantillas">Plantillas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
     </nav>
-    <a href="#contacto" class="btn-header">Contactar</a>
-  </div>
-</header>
+  </header>
 
-<main>
+  <section id="inicio" class="banner">
+    <h2>Bienvenido a TuConta360EC</h2>
+    <p>Tu portal de contabilidad y tributación ecuatoriana.</p>
+  </section>
 
-<section class="hero" id="inicio">
-<div class="container hero-content">
-<div class="hero-text">
-<h2>Soluciones contables y tributarias inteligentes para Ecuador</h2>
-<p>Portal profesional con herramientas, calculadoras, noticias, biblioteca y recursos para contadores, empresas y emprendedores.</p>
-<div class="hero-buttons">
-<a href="#calculadoras" class="btn-primary">Calculadoras</a>
-<a href="#descargas" class="btn-secondary">Plantillas</a>
-</div>
-</div>
+  <section id="calculadora">
+    <h2>Calculadora Tributaria</h2>
+    <form id="calcForm">
+      <label for="ingresos">Ingresos anuales (USD):</label>
+      <input type="number" id="ingresos" required>
 
-<div class="hero-card">
-<h3>Todo en un solo lugar</h3>
-<ul>
-<li>✓ Calculadoras tributarias</li>
-<li>✓ Plantillas profesionales</li>
-<li>✓ Biblioteca tributaria</li>
-<li>✓ Noticias del SRI</li>
-<li>✓ Capacitaciones</li>
-</ul>
-</div>
-</div>
-</section>
+      <label for="regimen">Seleccione régimen:</label>
+      <select id="regimen">
+        <option value="popular">Negocio Popular</option>
+        <option value="emprendedor">Emprendedor</option>
+        <option value="general">General</option>
+      </select>
 
-<section class="estadisticas">
-<div class="container">
-<div class="stats-grid">
-<div class="stat-card"><h3>10+</h3><p>Herramientas</p></div>
-<div class="stat-card"><h3>100+</h3><p>Plantillas</p></div>
-<div class="stat-card"><h3>365</h3><p>Actualizaciones</p></div>
-<div class="stat-card"><h3>24/7</h3><p>Disponible</p></div>
-</div>
-</div>
-</section>
+      <button type="submit">Calcular</button>
+    </form>
+    <div id="resultado"></div>
+  </section>
 
-<section class="servicios" id="servicios">
-<div class="container">
-<h2>Servicios</h2>
-<p class="subtitulo">Herramientas para una gestión tributaria eficiente.</p>
-<div class="cards">
-<div class="card"><div class="card-icon">🧮</div><h3>Calculadoras</h3><p>IVA, IR y más.</p></div>
-<div class="card"><div class="card-icon">📂</div><h3>Plantillas</h3><p>Excel y documentos.</p></div>
-<div class="card"><div class="card-icon">📚</div><h3>Biblioteca</h3><p>Normativa y guías.</p></div>
-<div class="card"><div class="card-icon">🎓</div><h3>Capacitaciones</h3><p>Cursos y talleres.</p></div>
-</div>
-</div>
-</section>
+  <section id="tablas">
+    <h2>Tablas Tributarias</h2>
+    <h3>Tabla Progresiva - Régimen General</h3>
+    <table>
+      <tr><th>Fracción Básica</th><th>Exceso hasta</th><th>Impuesto Fracción Básica</th><th>Porcentaje sobre excedente</th></tr>
+      <tr><td>0</td><td>11,722</td><td>0</td><td>0%</td></tr>
+      <tr><td>11,722</td><td>14,930</td><td>0</td><td>5%</td></tr>
+      <tr><td>14,930</td><td>19,385</td><td>160</td><td>10%</td></tr>
+      <!-- Agregar más filas según tablas actualizadas -->
+    </table>
 
-<section id="calculadoras"><div class="container"><h2>Calculadoras Tributarias</h2></div></section>
-<section id="descargas" class="descargas">
+    <h3>Retenciones de Renta e IVA</h3>
+    <table>
+      <tr><th>Concepto</th><th>Porcentaje</th></tr>
+      <tr><td>Servicios profesionales</td><td>10%</td></tr>
+      <tr><td>IVA bienes</td><td>30%</td></tr>
+      <!-- Completar con datos actualizados -->
+    </table>
+  </section>
 
-    <div class="container">
+  <section id="plantillas">
+    <h2>Plantillas</h2>
+    <p>Descarga nuestras plantillas en Excel, Word y PDF:</p>
+    <button onclick="window.location.href='plantillas/modelo.xlsx'">Descargar Excel</button>
+    <button onclick="window.location.href='plantillas/modelo.docx'">Descargar Word</button>
+    <button onclick="window.location.href='plantillas/modelo.pdf'">Descargar PDF</button>
+    <p>Sube tus propias plantillas:</p>
+    <input type="file" multiple>
+  </section>
 
-        <h2>Centro de Descargas</h2>
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Correo: contacto@tuconta360ec.com</p>
+    <p>Redes sociales: 
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">LinkedIn</a>
+    </p>
+  </section>
 
-        <p class="subtitulo">
-            Descarga gratuitamente herramientas y plantillas profesionales para Ecuador.
-        </p>
+  <footer>
+    <p>&copy; 2026 TuConta360EC - Todos los derechos reservados</p>
+  </footer>
 
-        <div class="cards">
-
-            <div class="card">
-
-                <div class="card-icon">📊</div>
-
-                <h3>Plantilla Cálculo de Impuestos</h3>
-
-                <p>
-                    Archivo Excel con macros para realizar cálculos tributarios.
-                </p>
-
-                <a href="plantillas/plantilla%20calculo%20impuestos.xlsm" download>
-                    📥 Descargar Plantilla
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<section id="biblioteca"><div class="container"><h2>Biblioteca Tributaria</h2></div></section>
-<section id="noticias"><div class="container"><h2>Noticias SRI</h2></div></section>
-<section id="contacto"><div class="container"><h2>Contacto</h2></div></section>
-
-</main>
-
-<footer>
-<div class="container">
-<p>© 2026 TuConta360EC - Todos los derechos reservados.</p>
-</div>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
-"""
-
-path="/mnt/data/index.html"
-Path(path).write_text(html,encoding="utf-8")
-print(path)
