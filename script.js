@@ -283,7 +283,7 @@ else{
 
     <p>
     Régimen:
-    <strong>${regimen}</strong>
+    <strong>${nombreRegimen}</strong>
     </p>
 
 
