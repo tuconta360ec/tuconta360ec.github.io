@@ -1,15 +1,23 @@
+/* Fuente y colores base */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
-  background-color: #f9f9f9;
+  background-color: #f4f6f9;
   color: #333;
 }
 
+/* Encabezado */
 header {
-  background-color: #003366;
+  background-color: #002b5c;
   color: white;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 2px;
 }
 
 nav ul {
@@ -17,6 +25,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 nav ul li {
@@ -26,50 +35,100 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Banner principal */
 .banner {
   background: linear-gradient(to right, #0066cc, #0099cc);
   color: white;
-  padding: 50px;
+  padding: 60px 20px;
   text-align: center;
 }
 
-section {
-  padding: 20px;
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
+/* Secciones */
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Tarjetas */
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  color: #002b5c;
+}
+
+.card button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card button:hover {
+  background-color: #004c99;
+}
+
+/* Tablas */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 15px 0;
+  margin: 20px 0;
 }
 
 table, th, td {
   border: 1px solid #ccc;
 }
 
-th, td {
-  padding: 10px;
-  text-align: center;
-}
-
-button {
+th {
   background-color: #0066cc;
   color: white;
-  border: none;
-  padding: 10px 15px;
-  margin: 5px;
-  cursor: pointer;
 }
 
-button:hover {
-  background-color: #004c99;
+th, td {
+  padding: 12px;
+  text-align: center;
 }
 
+/* Footer */
 footer {
-  background-color: #003366;
+  background-color: #002b5c;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+  margin-top: 30px;
 }
