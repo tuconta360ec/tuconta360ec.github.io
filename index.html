@@ -1,92 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TuConta360EC</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuConta360EC | Contabilidad y Tributación Ecuador</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <h1>TuConta360EC</h1>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        <h1>TuConta360EC</h1>
+        <span>Contabilidad & Tributación</span>
+    </div>
+
     <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#calculadora">Calculadora Tributaria</a></li>
-        <li><a href="#tablas">Tablas Tributarias</a></li>
-        <li><a href="#plantillas">Plantillas</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+
+        <ul>
+
+            <li><a href="#inicio">Inicio</a></li>
+
+            <li><a href="#servicios">Servicios</a></li>
+
+            <li><a href="#calculadora">Calculadora</a></li>
+
+            <li><a href="#tablas">Tablas</a></li>
+
+            <li><a href="#descargas">Descargas</a></li>
+
+            <li><a href="#contacto">Contacto</a></li>
+
+        </ul>
+
     </nav>
-  </header>
 
-  <section id="inicio" class="banner">
-    <h2>Bienvenido a TuConta360EC</h2>
-    <p>Tu portal de contabilidad y tributación ecuatoriana.</p>
-  </section>
+</header>
 
-  <section id="calculadora">
+<!-- ================= BANNER ================= -->
+
+<section id="inicio" class="banner">
+
+    <div class="banner-texto">
+
+        <h2>Portal Tributario del Ecuador</h2>
+
+        <p>
+            Aprende sobre impuestos, SRI, IESS,
+            declaraciones, formularios y herramientas
+            tributarias actualizadas.
+        </p>
+
+        <a href="#calculadora" class="btn">
+            Calculadora Tributaria
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= SERVICIOS ================= -->
+
+<section id="servicios">
+
+    <h2>Nuestros Servicios</h2>
+
+    <div class="contenedor-servicios">
+
+        <div class="card">
+
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+
+            <h3>Declaraciones</h3>
+
+            <p>IVA, Renta, Anexos y obligaciones tributarias.</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-calculator"></i>
+
+            <h3>Contabilidad</h3>
+
+            <p>Asesoría contable para personas y empresas.</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-building"></i>
+
+            <h3>RUC</h3>
+
+            <p>Apertura, actualización y suspensión.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CALCULADORA ================= -->
+
+<section id="calculadora">
+
     <h2>Calculadora Tributaria</h2>
-    <form id="calcForm">
-      <label for="ingresos">Ingresos anuales (USD):</label>
-      <input type="number" id="ingresos" required>
 
-      <label for="regimen">Seleccione régimen:</label>
-      <select id="regimen">
-        <option value="popular">Negocio Popular</option>
-        <option value="emprendedor">Emprendedor</option>
-        <option value="general">General</option>
-      </select>
-
-      <button type="submit">Calcular</button>
-    </form>
-    <div id="resultado"></div>
-  </section>
-
-  <section id="tablas">
-    <h2>Tablas Tributarias</h2>
-    <h3>Tabla Progresiva - Régimen General</h3>
-    <table>
-      <tr><th>Fracción Básica</th><th>Exceso hasta</th><th>Impuesto Fracción Básica</th><th>Porcentaje sobre excedente</th></tr>
-      <tr><td>0</td><td>11,722</td><td>0</td><td>0%</td></tr>
-      <tr><td>11,722</td><td>14,930</td><td>0</td><td>5%</td></tr>
-      <tr><td>14,930</td><td>19,385</td><td>160</td><td>10%</td></tr>
-      <!-- Agregar más filas según tablas actualizadas -->
-    </table>
-
-    <h3>Retenciones de Renta e IVA</h3>
-    <table>
-      <tr><th>Concepto</th><th>Porcentaje</th></tr>
-      <tr><td>Servicios profesionales</td><td>10%</td></tr>
-      <tr><td>IVA bienes</td><td>30%</td></tr>
-      <!-- Completar con datos actualizados -->
-    </table>
-  </section>
-
-  <section id="plantillas">
-    <h2>Plantillas</h2>
-    <p>Descarga nuestras plantillas en Excel, Word y PDF:</p>
-    <button onclick="window.location.href='plantillas/modelo.xlsx'">Descargar Excel</button>
-    <button onclick="window.location.href='plantillas/modelo.docx'">Descargar Word</button>
-    <button onclick="window.location.href='plantillas/modelo.pdf'">Descargar PDF</button>
-    <p>Sube tus propias plantillas:</p>
-    <input type="file" multiple>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Correo: contacto@tuconta360ec.com</p>
-    <p>Redes sociales: 
-      <a href="#">Facebook</a> | 
-      <a href="#">Twitter</a> | 
-      <a href="#">LinkedIn</a>
+    <p>
+        Próximamente incorporaremos una calculadora
+        automática de impuestos.
     </p>
-  </section>
 
-  <footer>
-    <p>&copy; 2026 TuConta360EC - Todos los derechos reservados</p>
-  </footer>
+</section>
 
-  <script src="script.js"></script>
+<!-- ================= TABLAS ================= -->
+
+<section id="tablas">
+
+    <h2>Tablas Tributarias</h2>
+
+    <p>
+        Aquí estarán las tablas de IVA,
+        retenciones e Impuesto a la Renta.
+    </p>
+
+</section>
+
+<!-- ================= DESCARGAS ================= -->
+
+<section id="descargas">
+
+    <h2>Centro de Descargas</h2>
+
+    <p>
+        Plantillas en Excel, Word y PDF.
+    </p>
+
+</section>
+
+<!-- ================= CONTACTO ================= -->
+
+<section id="contacto">
+
+    <h2>Contáctanos</h2>
+
+    <p>WhatsApp: 09XXXXXXXX</p>
+
+    <p>Correo: contacto@tuconta360ec.com</p>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 TuConta360EC |
+        Todos los derechos reservados.
+
+    </p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
