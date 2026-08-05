@@ -295,3 +295,42 @@ nav ul{
 }
 
 }
+/*=========================
+ESTADISTICAS
+=========================*/
+
+#estadisticas{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    background:#1565c0;
+
+    color:white;
+
+    padding:70px 8%;
+
+}
+
+.estadistica{
+
+    text-align:center;
+
+}
+
+.estadistica h2{
+
+    color:white;
+
+    font-size:48px;
+
+}
+
+.estadistica p{
+
+    font-size:18px;
+
+}
