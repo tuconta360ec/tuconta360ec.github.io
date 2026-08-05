@@ -117,10 +117,33 @@
 
     <h2>Calculadora Tributaria</h2>
 
-    <p>
-        Próximamente incorporaremos una calculadora
-        automática de impuestos.
-    </p>
+    <select id="regimen">
+
+        <option value="popular">Negocio Popular</option>
+
+        <option value="emprendedor">RIMPE Emprendedor</option>
+
+        <option value="general">Régimen General</option>
+
+    </select>
+
+    <br><br>
+
+    <input
+        type="number"
+        id="ingresos"
+        placeholder="Ingrese sus ingresos"
+    >
+
+    <br><br>
+
+    <button onclick="calcularImpuesto()" class="btn">
+
+        Calcular
+
+    </button>
+
+    <h3 id="resultado"></h3>
 
 </section>
 
