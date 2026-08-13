@@ -1,0 +1,6 @@
+Java es un lenguaje de programación orientado a objetos.
+Java permite trabajar con archivos y estructuras de datos.
+Las excepciones ayudan a controlar los errores del programa.
+Las listas permiten almacenar elementos de manera ordenada.
+Las pilas trabajan con el principio LIFO.
+Las colas trabajan con el principio FIFO.
