@@ -1,0 +1,5 @@
+Java es un lenguaje de programación orientado a objetos.
+Los archivos permiten almacenar información de manera permanente.
+La serialización permite guardar el estado de un objeto.
+Las estructuras de datos ayudan a organizar la información.
+Java proporciona diferentes clases para trabajar con archivos.
