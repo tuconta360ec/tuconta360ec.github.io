@@ -1,4 +1,0 @@
-RESULTADO DEL PROCESAMIENTO
-============================
-Archivo procesado: entrada.txt
-Cantidad total de palabras: 43
